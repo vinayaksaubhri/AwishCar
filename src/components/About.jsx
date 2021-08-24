@@ -33,14 +33,13 @@ function About() {
 
 export default About;
 const About__Contianer = styled.div`
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
+  /* padding-left: 9rem; */
 `;
 const About__Heading = styled.div`
   align-self: center;
-  margin-top: 1.4rem;
   font-weight: 600;
   font-size: 4rem;
   color: rgba(0, 0, 0, 0.8);
@@ -53,7 +52,9 @@ const About__Body = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding-left: 9rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 const Video = styled.div`
   background: #c4c4c4;

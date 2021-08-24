@@ -17,4 +17,6 @@ const Button__Container = styled.div`
   color: #4e9d82;
   font-size: 1.2rem;
   border-radius: 0.6rem;
+  font-style: normal;
+  font-weight: 600;
 `;

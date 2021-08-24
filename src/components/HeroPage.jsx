@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Carsvg from "../Image/SVG.svg";
 import Button2 from "./Button2";
+import { useMediaQuery } from "react-responsive";
 
 function HeroPage() {
   return (
@@ -28,7 +29,7 @@ function HeroPage() {
           />
         </div>
       </HeroPage__Text_Container>
-      <img src={Carsvg} alt="" />
+      <img src={Carsvg} alt="" />/
     </HeroPage__Container>
   );
 }
@@ -43,12 +44,19 @@ const HeroPage__Container = styled.div`
     height: 66rem;
     width: 54rem;
   }
-  padding-left: 9rem;
+  @media (max-width: 980px) {
+    img {
+      display: none;
+    }
+    padding-top: 60px;
+    justify-content: center;
+  }
 `;
 const HeroPage__Text_Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2.8rem;
+  margin-left: 9rem;
 `;
 const HeroPage__Text_Heading = styled.div`
   font-weight: 600;
