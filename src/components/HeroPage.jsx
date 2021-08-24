@@ -19,16 +19,14 @@ function HeroPage() {
           <br />
           Save more than 150 liters of water.
         </HeroPage__Text_Body>
-        <div
-          style={{ display: "flex", gap: "1.8rem", justifyContent: "center" }}
-        >
+        <Button_Container>
           <Button2 Text="Book Now" BackgroundColor="#01A164" Color="#FFFFFF" />
           <Button2
             Text="Contact Us"
             BackgroundColor="#F0F0F0"
             Color="rgba(0, 0, 0, 0.7);"
           />
-        </div>
+        </Button_Container>
       </HeroPage__Text_Container>
       <img src={Carsvg} alt="" />/
     </HeroPage__Container>
@@ -76,5 +74,12 @@ const HeroPage__Text_Body = styled.div`
   @media (max-width: 768px) {
     font-size: 1.2rem;
     text-align: center;
+  }
+`;
+const Button_Container = styled.div`
+  display: flex;
+  gap: 1.8rem;
+  @media (max-width: 768px) {
+    justify-content: center;
   }
 `;
