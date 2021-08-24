@@ -57,4 +57,7 @@ const Card__Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;

@@ -33,10 +33,11 @@ function About() {
 
 export default About;
 const About__Contianer = styled.div`
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
-  /* padding-left: 9rem; */
+  @media (max-width: 980px) {
+    justify-content: center;
+  }
 `;
 const About__Heading = styled.div`
   align-self: center;
@@ -54,12 +55,19 @@ const About__Body = styled.div`
   justify-content: space-around;
   @media (max-width: 768px) {
     flex-direction: column;
+    /* justify-content: center; */
+    font-size: 14px;
   }
 `;
 const Video = styled.div`
   background: #c4c4c4;
   height: 30rem;
   width: 50rem;
+  @media (max-width: 768px) {
+    height: 25rem;
+    width: 45rem;
+    align-self: center;
+  }
 `;
 const About__Body_Content = styled.div`
   font-size: 2rem;
@@ -71,5 +79,9 @@ const About__Body_Content = styled.div`
   height: 30rem;
   i {
     font-weight: 200;
+  }
+  @media (max-width: 768px) {
+    width: 41rem;
+    gap: 20px;
   }
 `;

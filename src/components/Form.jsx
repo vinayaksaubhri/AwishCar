@@ -21,7 +21,7 @@ function Form() {
 
 export default Form;
 const Form__Container = styled.form`
-  padding: 0px 55px;
+  padding: 0px 5%.5rem;
   height: 100%;
   font-weight: 600;
   font-size: 26px;
@@ -34,10 +34,10 @@ const Form__Container = styled.form`
     background: rgba(145, 137, 137, 0.25);
     border: 0.5px solid #ffffff;
     box-sizing: border-box;
-    border-radius: 5px;
-    font-size: 12px;
-    width: 275px;
-    height: 35.17px;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    width: 27.5rem;
+    height: 3.5rem;
   }
   input::placeholder {
     color: #ffffff;
@@ -48,8 +48,8 @@ const Form__Button = styled.div`
   border: 1px solid #ffffff;
   box-sizing: border-box;
   border-radius: 6px;
-  width: 98px;
-  height: 28.14px;
+  width: 9.8rem;
+  height: 2.8rem;
   font-weight: 500;
   font-size: 14px;
   display: flex;

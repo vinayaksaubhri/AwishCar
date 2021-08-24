@@ -58,4 +58,7 @@ const Circle__Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;

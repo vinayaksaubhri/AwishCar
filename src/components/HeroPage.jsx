@@ -57,10 +57,17 @@ const HeroPage__Text_Container = styled.div`
   flex-direction: column;
   gap: 2.8rem;
   margin-left: 9rem;
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
 `;
 const HeroPage__Text_Heading = styled.div`
   font-weight: 600;
   font-size: 3.6rem;
+  @media (max-width: 768px) {
+    font-size: 2.6rem;
+    text-align: center;
+  }
 `;
 const HeroPage__Text_Body = styled.div`
   font-weight: normal;

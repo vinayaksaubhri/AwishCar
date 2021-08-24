@@ -56,4 +56,7 @@ const WhyUs__Card_Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
