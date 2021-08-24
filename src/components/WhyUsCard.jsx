@@ -28,16 +28,29 @@ const WhyUs__Card = styled.div`
   img {
     width: 9rem;
   }
+  @media (max-width: 768px) {
+    img {
+      width: 7.5rem;
+    }
+    width: 30rem;
+    height: 34rem;
+  }
 `;
 const WhyUs__Card_Heading = styled.div`
   font-weight: 500;
   font-size: 25px;
   color: rgba(0, 0, 0, 0.8);
   margin-top: 4rem;
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
 `;
 const WhyUS__Card_Body = styled.div`
   font-weight: 500;
   font-size: 16px;
   color: rgba(0, 0, 0, 0.6);
   margin-top: 1.5rem;
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+  }
 `;

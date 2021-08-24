@@ -47,10 +47,17 @@ const WhyUs__Heading_Contianer = styled.div`
   font-size: 4rem;
   color: rgba(0, 0, 0, 0.8);
   text-align: center;
+  @media (max-width: 768px) {
+    font-size: 2.4rem;
+  }
 `;
 const SubHeading = styled.div`
   font-size: 1.8rem;
   margin-top: 1rem;
+  font-weight: normal;
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
 `;
 const WhyUs__Card_Container = styled.div`
   display: flex;
@@ -58,5 +65,7 @@ const WhyUs__Card_Container = styled.div`
   justify-content: space-around;
   @media (max-width: 768px) {
     flex-direction: column;
+    align-self: center;
+    gap: 5rem;
   }
 `;

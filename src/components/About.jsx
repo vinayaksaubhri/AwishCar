@@ -35,7 +35,7 @@ export default About;
 const About__Contianer = styled.div`
   display: flex;
   flex-direction: column;
-  @media (max-width: 980px) {
+  @media (max-width: 768px) {
     justify-content: center;
   }
 `;
@@ -46,6 +46,9 @@ const About__Heading = styled.div`
   color: rgba(0, 0, 0, 0.8);
   span {
     font-weight: 300;
+  }
+  @media (max-width: 768px) {
+    font-size: 2.4rem;
   }
 `;
 const About__Body = styled.div`
@@ -64,8 +67,8 @@ const Video = styled.div`
   height: 30rem;
   width: 50rem;
   @media (max-width: 768px) {
-    height: 25rem;
-    width: 45rem;
+    width: 30rem;
+    height: 21rem;
     align-self: center;
   }
 `;
@@ -81,7 +84,9 @@ const About__Body_Content = styled.div`
     font-weight: 200;
   }
   @media (max-width: 768px) {
+    margin-top: 7rem;
     width: 41rem;
-    gap: 20px;
+    font-size: 1.4rem;
+    align-self: center;
   }
 `;

@@ -17,7 +17,7 @@ const Button__Container = styled.div`
   border-radius: 1rem;
   background: ${(props) => props.BackgroundColor};
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,5 +26,11 @@ const Button__Container = styled.div`
   &:hover {
     background: ${(props) => props.BackgroundColor === "#01A164" && "#028c57"};
     background: ${(props) => props.BackgroundColor === "#F0F0F0" && "#EBEBEB"};
+  }
+  @media (max-width: 768px) {
+    width: 13.8rem;
+    height: 4.5rem;
+    font-size: 1.3rem;
+    border-radius: 4px;
   }
 `;

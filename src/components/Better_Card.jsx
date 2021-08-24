@@ -26,6 +26,15 @@ const Container = styled.div`
   box-shadow: 0px 6.25952px 4.17302px rgba(243, 243, 243, 0.65),
     0px 3.12976px 8.34603px rgba(243, 243, 243, 0.65);
   border-radius: 0.4rem;
+  border: 1px solid #8ff1d5;
+  box-sizing: border-box;
+  box-shadow: 0px 6.25952px 4.17302px rgba(243, 243, 243, 0.65),
+    0px 3.12976px 8.34603px rgba(243, 243, 243, 0.65);
+  @media (max-width: 768px) {
+    width: 35rem;
+    height: 44rem;
+    align-self: center;
+  }
 `;
 const Card__Heading = styled.div`
   font-weight: 500;
@@ -33,11 +42,14 @@ const Card__Heading = styled.div`
   color: ${(props) => props.Color};
   padding-top: 4.5rem;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
 `;
 const Card__List = styled.div`
   display: flex;
   flex-direction: column;
-
   padding: 50px;
 `;
 const List_item = styled.div`
@@ -45,4 +57,7 @@ const List_item = styled.div`
   margin-bottom: 20px;
   display: flex;
   gap: 1rem;
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+  }
 `;

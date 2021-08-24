@@ -8,7 +8,7 @@ function Footer() {
     <Container>
       <Form />
       <Text> ©2021 AwishCar </Text>
-      {/* <img src={Carsvg} alt="" /> */}
+      <img src={Carsvg} alt="" />
     </Container>
   );
 }
@@ -20,6 +20,12 @@ const Container = styled.div`
   background: #01a164;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    img {
+      display: none;
+    }
+  }
 `;
 const Text = styled.div`
   font-weight: bold;
@@ -27,4 +33,7 @@ const Text = styled.div`
   color: #ffffff;
   align-self: flex-end;
   padding-bottom: 2rem;
+  @media (max-width: 768px) {
+    align-self: center;
+  }
 `;

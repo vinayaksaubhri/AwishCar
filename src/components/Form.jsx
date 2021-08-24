@@ -29,6 +29,9 @@ const Form__Container = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  @media (max-width: 768px) {
+    align-self: center;
+  }
 
   input {
     background: rgba(145, 137, 137, 0.25);

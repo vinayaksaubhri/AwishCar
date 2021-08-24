@@ -47,6 +47,9 @@ const Container = styled.div`
   align-items: center;
   color: ${(props) => props.Color};
   border: 1px solid #8ff1d5;
+  @media (max-width: 768px) {
+    align-self: center;
+  }
 `;
 const Month__Heading = styled.div`
   font-size: 2.4rem;
