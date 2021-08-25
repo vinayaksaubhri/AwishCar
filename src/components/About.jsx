@@ -85,7 +85,7 @@ const About__Body_Content = styled.div`
   }
   @media (max-width: 768px) {
     margin-top: 7rem;
-    width: 41rem;
+    width: 85%;
     font-size: 1.4rem;
     align-self: center;
   }

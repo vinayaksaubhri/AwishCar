@@ -28,7 +28,7 @@ function HeroPage() {
           />
         </Button_Container>
       </HeroPage__Text_Container>
-      <img src={Carsvg} alt="" />/
+      <img src={Carsvg} alt="" />
     </HeroPage__Container>
   );
 }
