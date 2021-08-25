@@ -3,12 +3,22 @@ import styled from "styled-components";
 
 function About() {
   return (
-    <About__Contianer>
+    <About__Contianer id="about">
       <About__Heading>
         About <span>Us</span>
       </About__Heading>
       <About__Body>
-        <Video></Video>
+        <Video>
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/dFvZQlOL_3w"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </Video>
         <About__Body_Content>
           Awishcar is a company that believes in challenging the present state
           of how car being cleaned in our country.
@@ -63,9 +73,9 @@ const About__Body = styled.div`
   }
 `;
 const Video = styled.div`
-  background: #c4c4c4;
   height: 30rem;
   width: 50rem;
+  overflow: hidden;
   @media (max-width: 768px) {
     width: 30rem;
     height: 21rem;

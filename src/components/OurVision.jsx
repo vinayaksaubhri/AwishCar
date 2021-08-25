@@ -56,6 +56,7 @@ const Heading__Container = styled.div`
 const SubHeading = styled.div`
   font-size: 1.8rem;
   margin-top: 1rem;
+  font-weight: normal;
   @media (max-width: 768px) {
     font-size: 1.4rem;
   }

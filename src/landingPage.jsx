@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react-hooks/rules-of-hooks */
+import { React } from "react";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import HeroPage from "./components/HeroPage";

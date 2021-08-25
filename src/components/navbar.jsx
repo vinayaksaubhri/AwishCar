@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Logoimage from "../Image/logoimage.svg";
 import Button from "./Button";
+import { Link } from "react-scroll";
 
 function navbar() {
   return (
@@ -12,9 +13,20 @@ function navbar() {
           AwishCar
         </Logo__Container>
         <Navbar__Button__Container>
-          <Navbar__Button>Home</Navbar__Button>
-          <Navbar__Button>About Us</Navbar__Button>
-          <Navbar__Button>Pricing</Navbar__Button>
+          <Navbar__Button to="main" smooth={true} duration={500}>
+            Home
+          </Navbar__Button>
+          <Navbar__Button to="about" smooth={true} duration={500} offset={-100}>
+            About Us
+          </Navbar__Button>
+          <Navbar__Button
+            to="pricing"
+            smooth={true}
+            duration={500}
+            offset={150}
+          >
+            Pricing
+          </Navbar__Button>
           <Button />
         </Navbar__Button__Container>
       </Navbar__Container>
@@ -33,6 +45,7 @@ const Navbar__Container = styled.div`
   background: white;
   z-index: 1;
   min-height: 60px;
+  margin-right: 9rem;
   @media (max-width: 980px) {
   }
 `;
@@ -44,7 +57,7 @@ const Navbar__Button__Container = styled.div`
   cursor: pointer;
   margin-right: 20px;
 `;
-const Navbar__Button = styled.div`
+const Navbar__Button = styled(Link)`
   font-style: normal;
   font-weight: 600;
   font-size: 1.8rem;

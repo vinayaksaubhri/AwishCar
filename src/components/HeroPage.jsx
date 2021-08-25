@@ -1,11 +1,11 @@
-import React from "react";
+import { React } from "react";
 import styled from "styled-components";
 import Carsvg from "../Image/SVG.svg";
 import Button2 from "./Button2";
 
 function HeroPage() {
   return (
-    <HeroPage__Container>
+    <HeroPage__Container id="main">
       <HeroPage__Text_Container>
         <HeroPage__Text_Heading>
           Eco-friendly,
@@ -42,6 +42,7 @@ const HeroPage__Container = styled.div`
   img {
     height: 66rem;
     width: 54rem;
+    margin-right: 4rem;
   }
   @media (max-width: 768px) {
     img {

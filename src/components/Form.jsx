@@ -8,11 +8,11 @@ function Form() {
       <input type="text" name="Name" placeholder="Name" />
       <input type="email" name="Email" placeholder="Email" />
       <input type="tel" name="Phone" placeholder="Phone Number" />
-      <input
-        type="text"
+      <textarea
         name="Message"
         placeholder="Type your message here..."
-        rows="4"
+        id="msg"
+        rows="5"
       />
       <Form__Button>Sumit</Form__Button>
     </Form__Container>
@@ -41,10 +41,24 @@ const Form__Container = styled.form`
     font-size: 1.2rem;
     width: 27.5rem;
     height: 3.5rem;
+    padding: 1rem;
+    color: #ffffff;
   }
   input::placeholder {
     color: #ffffff;
+  }
+  #msg {
+    background: rgba(145, 137, 137, 0.25);
+    border: 0.5px solid #ffffff;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    color: #ffffff;
     padding: 1rem;
+    font-family: "inter";
+  }
+  #msg::placeholder {
+    color: #ffffff;
   }
 `;
 const Form__Button = styled.div`
