@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { React } from "react";
 import About from "./components/About";
+import CardSlider from "./components/CardSlider";
 import Footer from "./components/Footer";
 import HeroPage from "./components/HeroPage";
 import Navbar from "./components/navbar";
@@ -20,6 +21,7 @@ function landingPage() {
       <OurVision />
       <OurPackage />
       <Footer />
+      <CardSlider />
     </>
   );
 }
