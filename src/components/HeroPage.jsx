@@ -2,10 +2,10 @@ import { React } from "react";
 import styled from "styled-components";
 import Carsvg from "../Image/SVG.svg";
 import Button2 from "./Button2";
-
+import Background from "../Image/Background.svg";
 function HeroPage() {
   return (
-    <HeroPage__Container id="main">
+    <HeroPage__Container id="main" img={Background}>
       <HeroPage__Text_Container>
         <HeroPage__Text_Heading>
           Eco-friendly,
@@ -49,6 +49,9 @@ const HeroPage__Container = styled.div`
       display: none;
     }
     justify-content: center;
+    background-image: url(${(props) => props.img});
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 `;
 const HeroPage__Text_Container = styled.div`

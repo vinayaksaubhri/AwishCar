@@ -48,6 +48,9 @@ const Container = styled.div`
   flex-direction: column;
   padding-top: 20rem;
   gap: 5rem;
+  @media (max-width: 768px) {
+    padding-top: 10rem;
+  }
 `;
 const Heading_Contianer = styled.div`
   font-weight: 600;
@@ -92,7 +95,7 @@ const Card__Svg_container = styled.div`
     right: 80px;
   }
   @media (max-width: 768px) {
-    img {
+    & > img {
       display: none;
     }
   }

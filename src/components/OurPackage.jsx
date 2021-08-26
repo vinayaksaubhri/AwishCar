@@ -83,6 +83,9 @@ const Container = styled.div`
   padding-top: 20rem;
   gap: 5rem;
   margin-bottom: 10.6rem;
+  @media (max-width: 768px) {
+    padding-top: 10rem;
+  }
 `;
 const Heading_Contianer = styled.div`
   font-weight: 600;
@@ -113,9 +116,8 @@ const PackageCard__Container = styled.div`
 `;
 const Card__Svg_container = styled.div`
   display: flex;
-  align-content: center;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-end;
   @media (max-width: 768px) {
     img {
       display: none;

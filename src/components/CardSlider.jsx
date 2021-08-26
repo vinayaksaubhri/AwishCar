@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+
 import PackageCard from "./PackageCard";
 import {
   OneMonthList,
@@ -14,19 +14,26 @@ import "slick-carousel/slick/slick-theme.css";
 
 const settings = {
   dots: true,
-  infinite: false,
+  infinite: true,
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  className: "center",
   centerMode: true,
-  centerPadding: "7rem",
+  centerPadding: "6rem",
+  autoplay: true,
+  autoplaySpeed: 2000,
+  pauseOnHover: true,
 };
 
 export default function CardSlider() {
   return (
-    <div style={{}}>
-      <Slider {...settings}>
+    <Slider
+      {...settings}
+      style={{
+        width: "90vw",
+      }}
+    >
+      <div>
         <PackageCard
           Text="1 Months"
           Array={OneMonthList}
@@ -38,7 +45,8 @@ export default function CardSlider() {
           BackGroundColorButton="rgba(1, 161, 100, 0.2);"
           ColorButton="#01A164"
         />
-
+      </div>
+      <div>
         <PackageCard
           Text="3 Months"
           Array={ThreeMonthList}
@@ -50,6 +58,8 @@ export default function CardSlider() {
           BackGroundColorButton="#ffffff"
           ColorButton="#01A164"
         />
+      </div>
+      <div>
         <PackageCard
           Text="6 Months"
           Array={SixMonthList}
@@ -61,17 +71,7 @@ export default function CardSlider() {
           BackGroundColorButton="rgba(1, 161, 100, 0.2);"
           ColorButton="#01A164"
         />
-      </Slider>
-    </div>
+      </div>
+    </Slider>
   );
 }
-const PackageCard__Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 5rem;
-  }
-`;

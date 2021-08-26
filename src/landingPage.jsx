@@ -7,8 +7,10 @@ import HeroPage from "./components/HeroPage";
 import Navbar from "./components/navbar";
 import OurPackage from "./components/OurPackage";
 import OurVision from "./components/OurVision";
+import VisionSlider from "./components/VisionSlider";
 import WhatMakeUSBetter from "./components/WhatMakeUSBetter";
 import WhyUS from "./components/WhyUS";
+import WhyUSSlider from "./components/WhyUSSlider";
 
 function landingPage() {
   return (
