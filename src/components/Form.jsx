@@ -1,20 +1,66 @@
-import React from "react";
+import { React, useState } from "react";
 import styled from "styled-components";
+import axios from "axios";
 
 function Form() {
+  const [Name, setName] = useState("");
+  const [Email, setEmail] = useState("");
+  const [Phone, setPhone] = useState("");
+  const [Text, setText] = useState("");
+  const handleSumit = (e) => {
+    e.preventDefault();
+    console.log(Name, Email, Phone, Text);
+    const Data = {
+      Name,
+      Email,
+      Phone,
+      Text,
+    };
+    axios
+      .post("https://formsubmit.co/awishcar06@gmail.com", Data)
+      .then((response) => {
+        console.log(response);
+      });
+    setName("");
+    setEmail("");
+    setPhone("");
+    setText("");
+  };
   return (
     <Form__Container>
       Contact US
-      <input type="text" name="Name" placeholder="Name" />
-      <input type="email" name="Email" placeholder="Email" />
-      <input type="tel" name="Phone" placeholder="Phone Number" />
+      <input
+        type="text"
+        name="entry.1357326313"
+        value={Name}
+        placeholder="Name"
+        onChange={(e) => setName(e.target.value)}
+      />
+      <input
+        type="email"
+        name="entry.2054281188"
+        value={Email}
+        placeholder="Email"
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <input
+        type="tel"
+        name="entry.1439855872"
+        value={Phone}
+        placeholder="Phone Number"
+        onChange={(e) => setPhone(e.target.value)}
+      />
       <textarea
-        name="Message"
-        placeholder="Type your message here..."
+        name="entry.181839986"
         id="msg"
         rows="5"
+        value={Text}
+        placeholder="Enter Text Here..."
+        onChange={(e) => setText(e.target.value)}
       />
-      <Form__Button>Sumit</Form__Button>
+      <Form__Button type="submit" onClick={handleSumit}>
+        Sumit
+      </Form__Button>
     </Form__Container>
   );
 }
@@ -43,6 +89,7 @@ const Form__Container = styled.form`
     height: 3.5rem;
     padding: 1rem;
     color: #ffffff;
+    outline: none;
   }
   input::placeholder {
     color: #ffffff;
@@ -73,4 +120,5 @@ const Form__Button = styled.div`
   justify-content: center;
   align-items: center;
   align-self: flex-end;
+  cursor: pointer;
 `;

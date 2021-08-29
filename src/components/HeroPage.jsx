@@ -50,8 +50,9 @@ const HeroPage__Container = styled.div`
     }
     justify-content: center;
     background-image: url(${(props) => props.img});
-    background-repeat: no-repeat;
-    background-position: center center;
+    background-repeat: repeat-y;
+    background-position: center;
+    height: 100vh;
   }
 `;
 const HeroPage__Text_Container = styled.div`

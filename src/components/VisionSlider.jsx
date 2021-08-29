@@ -6,6 +6,7 @@ import VisionCircle from "./VisionCircle";
 import Water from "../Image/Drop.svg";
 import Profile from "../Image/Profile.svg";
 import Eco from "../Image/Eco.svg";
+import "../style.css";
 
 const settings = {
   dots: true,
@@ -13,9 +14,6 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  className: "center",
-  centerMode: true,
-  centerPadding: "1rem",
   autoplay: true,
   autoplaySpeed: 2000,
   pauseOnHover: true,
@@ -23,7 +21,7 @@ const settings = {
 
 export default function VisionSlider() {
   return (
-    <Slider {...settings} style={{ width: "90vw" }}>
+    <Slider {...settings} style={{ width: "93vw" }}>
       <VisionCircle
         Heading="Save Water"
         Subheading="We use special technique to minimize the use of water."
