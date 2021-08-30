@@ -1,57 +1,58 @@
 import { React, useState } from "react";
 import styled from "styled-components";
-import axios from "axios";
+import database from "../utils/firebase";
+import { ref, set, push } from "firebase/database";
 
 function Form() {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Phone, setPhone] = useState("");
   const [Text, setText] = useState("");
+
   const handleSumit = (e) => {
     e.preventDefault();
-    console.log(Name, Email, Phone, Text);
-    const Data = {
+
+    const ContactRef = ref(database, "Contact");
+    const newContactRef = push(ContactRef);
+    set(newContactRef, {
       Name,
       Email,
       Phone,
       Text,
-    };
-    axios
-      .post("https://formsubmit.co/awishcar06@gmail.com", Data)
-      .then((response) => {
-        console.log(response);
-      });
+    });
+
     setName("");
     setEmail("");
     setPhone("");
     setText("");
   };
+
   return (
     <Form__Container>
       Contact US
       <input
         type="text"
-        name="entry.1357326313"
+        name="Name"
         value={Name}
         placeholder="Name"
         onChange={(e) => setName(e.target.value)}
       />
       <input
         type="email"
-        name="entry.2054281188"
+        name="Email"
         value={Email}
         placeholder="Email"
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
         type="tel"
-        name="entry.1439855872"
+        name="Phone"
         value={Phone}
         placeholder="Phone Number"
         onChange={(e) => setPhone(e.target.value)}
       />
       <textarea
-        name="entry.181839986"
+        name="Message"
         id="msg"
         rows="5"
         value={Text}

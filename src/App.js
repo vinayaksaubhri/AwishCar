@@ -1,9 +1,19 @@
+import BookNow from "./BookNow";
 import LandingPage from "./landingPage";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 function App() {
   return (
-    <>
-      <LandingPage />
-    </>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <LandingPage />
+        </Route>
+        <Route exact path="/BookNow">
+          <BookNow />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

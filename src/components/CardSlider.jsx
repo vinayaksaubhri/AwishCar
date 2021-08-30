@@ -6,8 +6,6 @@ import {
   ThreeMonthList,
   SixMonthList,
 } from "../Static/PriceList";
-import GreenTick from "../Image/Tick.svg";
-import GreyTick from "../Image/GreyTick.svg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -24,7 +22,7 @@ const settings = {
   pauseOnHover: true,
 };
 
-export default function CardSlider() {
+export default function CardSlider({ Text }) {
   return (
     <Slider
       {...settings}
@@ -37,11 +35,7 @@ export default function CardSlider() {
         Array={OneMonthList}
         Price="₹ 1449"
         SecondPrice="1500"
-        BackGroundColor="#ffffff"
-        Color="rgba(0, 0, 0, 0.8)"
-        Tick={GreyTick}
-        BackGroundColorButton="rgba(1, 161, 100, 0.2);"
-        ColorButton="#01A164"
+        ButtonText={Text}
       />
 
       <PackageCard
@@ -49,11 +43,8 @@ export default function CardSlider() {
         Array={ThreeMonthList}
         Price="₹ 4347"
         SecondPrice="4500"
-        BackGroundColor="#01A164"
-        Color="#ffffff"
-        Tick={GreenTick}
-        BackGroundColorButton="#ffffff"
-        ColorButton="#01A164"
+        Green
+        ButtonText={Text}
       />
 
       <PackageCard
@@ -61,11 +52,7 @@ export default function CardSlider() {
         Array={SixMonthList}
         Price="₹ 8694"
         SecondPrice="8700"
-        BackGroundColor="#ffffff"
-        Color="rgba(0, 0, 0, 0.8)"
-        Tick={GreyTick}
-        BackGroundColorButton="rgba(1, 161, 100, 0.2);"
-        ColorButton="#01A164"
+        ButtonText={Text}
       />
     </Slider>
   );

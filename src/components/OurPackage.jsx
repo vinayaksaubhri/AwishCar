@@ -6,8 +6,6 @@ import {
   ThreeMonthList,
   SixMonthList,
 } from "../Static/PriceList";
-import GreenTick from "../Image/Tick.svg";
-import GreyTick from "../Image/GreyTick.svg";
 import LeftLeaf from "../Image/LeftLeaf.svg";
 import RightLeaf from "../Image/RightLeaf.svg";
 import MediaQuery from "react-responsive";
@@ -37,39 +35,29 @@ function OurPackage() {
               Price="₹ 1449"
               SecondPrice="1500"
               BackGroundColor="#ffffff"
-              Color="rgba(0, 0, 0, 0.8)"
-              Tick={GreyTick}
-              BackGroundColorButton="rgba(1, 161, 100, 0.2);"
-              ColorButton="#01A164"
+              ButtonText="Book Now"
             />
             <PackageCard
               Text="3 Months"
               Array={ThreeMonthList}
               Price="₹ 4347"
               SecondPrice="4500"
-              BackGroundColor="#01A164"
-              Color="#ffffff"
-              Tick={GreenTick}
-              BackGroundColorButton="#ffffff"
-              ColorButton="#01A164"
+              ButtonText="Book Now"
+              Green
             />
             <PackageCard
               Text="6 Months"
               Array={SixMonthList}
               Price="₹ 8694"
               SecondPrice="8700"
-              BackGroundColor="#ffffff"
-              Color="rgba(0, 0, 0, 0.8)"
-              Tick={GreyTick}
-              BackGroundColorButton="rgba(1, 161, 100, 0.2);"
-              ColorButton="#01A164"
+              ButtonText="Book Now"
             />
           </PackageCard__Container>
           <img src={RightLeaf} alt="" />
         </Card__Svg_container>
       </MediaQuery>
       <MediaQuery maxWidth={768}>
-        <CardSlider />
+        <CardSlider Text="Book Now" />
       </MediaQuery>
     </Container>
   );

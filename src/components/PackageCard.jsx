@@ -1,26 +1,25 @@
 import React from "react";
 import styled from "styled-components";
-
 import Button3 from "./Button3";
+import GreenTick from "../Image/Tick.svg";
+import GreyTick from "../Image/GreyTick.svg";
 
 function PackageCard({
   Text,
   Array,
   Price,
   SecondPrice,
-  BackGroundColor,
-  Color,
-  Tick,
-  BackGroundColorButton,
-  ColorButton,
+  Green = false,
+  ButtonText,
+  HandelClick,
 }) {
   return (
-    <Container BackGroundColor={BackGroundColor} Color={Color}>
+    <Container Green={Green}>
       <Month__Heading>{Text}</Month__Heading>
       <Card__List>
         {Array.map((Price) => (
           <List_item>
-            <img src={Tick} />
+            <img src={Green ? GreenTick : GreyTick} />
             {Price[0]}
             <List_item_Second>{Price[1]}</List_item_Second>
           </List_item>
@@ -30,7 +29,7 @@ function PackageCard({
         {Price}
         <Card__Price_Second>({SecondPrice})</Card__Price_Second>
       </Card__Price>
-      <Button3 BackGroundColor={BackGroundColorButton} Color={ColorButton} />
+      <Button3 Text={ButtonText} Green={Green} HandelClick={HandelClick} />
     </Container>
   );
 }
@@ -39,14 +38,14 @@ export default PackageCard;
 const Container = styled.div`
   width: 280px;
   height: 430px;
-  background: ${(props) => props.BackGroundColor};
+  background: ${(props) => (props.Green ? "#01A164" : "#ffffff")};
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  color: ${(props) => props.Color};
-  border: 1px solid #8ff1d5;
+  color: ${(props) => (props.Green ? "#ffffff" : "rgba(0, 0, 0, 0.8)")};
+  border: ${(props) => (props.Green ? "none" : "1px solid #8ff1d5")};
   @media (max-width: 768px) {
     align-self: center;
   }
