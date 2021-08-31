@@ -5,7 +5,7 @@ import Carsvg from "../Image/SVG.svg";
 
 function Footer() {
   return (
-    <Container>
+    <Container id="contact">
       <Form />
       <Text> ©2021 AwishCar </Text>
       <img src={Carsvg} alt="" />

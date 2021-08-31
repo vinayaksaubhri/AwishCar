@@ -20,12 +20,8 @@ function HeroPage() {
           Save more than 150 liters of water.
         </HeroPage__Text_Body>
         <Button_Container>
-          <Button2 Text="Book Now" BackgroundColor="#01A164" Color="#FFFFFF" />
-          <Button2
-            Text="Contact Us"
-            BackgroundColor="#F0F0F0"
-            Color="rgba(0, 0, 0, 0.7);"
-          />
+          <Button2 Text="Book Now" BookNow />
+          <Button2 Text="Contact Us" ContactUS />
         </Button_Container>
       </HeroPage__Text_Container>
       <img src={Carsvg} alt="" />

@@ -11,20 +11,29 @@ function Form() {
 
   const handleSumit = (e) => {
     e.preventDefault();
-
-    const ContactRef = ref(database, "Contact");
-    const newContactRef = push(ContactRef);
-    set(newContactRef, {
-      Name,
-      Email,
-      Phone,
-      Text,
-    });
-
-    setName("");
-    setEmail("");
-    setPhone("");
-    setText("");
+    const date = new Date().toString();
+    if (Name === "" || Email === "" || Phone === "" || Text === "") {
+      alert("Please fill the form completely");
+    } else if (Phone.length > 10) {
+      alert("Phone number can only be of 10 digit");
+    } else if (Email !== "" && !/\S+@\S+\.\S+/.test(Email)) {
+      alert("Email is invalid");
+    } else {
+      const ContactRef = ref(database, "Contact");
+      const newContactRef = push(ContactRef);
+      set(newContactRef, {
+        Name,
+        Email,
+        Phone,
+        Text,
+        date,
+      });
+      alert("Form Submit");
+      setName("");
+      setEmail("");
+      setPhone("");
+      setText("");
+    }
   };
 
   return (

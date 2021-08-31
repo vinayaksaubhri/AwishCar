@@ -1,15 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-function SumitButton({ handleSubmit }) {
-  return (
-    <Container type="sumit" onClick={handleSubmit}>
-      Sumit
-    </Container>
-  );
+function SubmitButton({ handleSubmit }) {
+  return <Container onClick={handleSubmit}>Submit</Container>;
 }
 
-export default SumitButton;
+export default SubmitButton;
 
 const Container = styled.div`
   background: #01a164;
