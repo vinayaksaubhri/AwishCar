@@ -10,6 +10,8 @@ import database from "./utils/firebase";
 import { ref, set, push } from "firebase/database";
 import { useHistory } from "react-router";
 import ScrollToOnMount from "./components/ScrollToOnMount";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function BookNow() {
   const [Name, setName] = useState("");
@@ -19,6 +21,7 @@ function BookNow() {
   const [Car, setCar] = useState("Hatchback");
   const [Package, setPackage] = useState("");
   const history = useHistory();
+  toast.configure();
 
   const getPackage = (Green) => {
     if (Green.Card1 === true) {
@@ -39,13 +42,21 @@ function BookNow() {
       Package === "" ||
       Car === ""
     ) {
-      alert("Please fill the form completely");
+      toast.warn("Please fill the form completely", {
+        autoClose: false,
+      });
     } else if (Phone.length > 10) {
-      alert("Phone number can only be of 10 digit");
+      toast.warn("Phone number can only be of 10 digit", {
+        autoClose: false,
+      });
     } else if (Email !== "" && !/\S+@\S+\.\S+/.test(Email)) {
-      alert("Email is invalid");
+      toast.warn("Email is invalid", {
+        autoClose: false,
+      });
     } else {
-      alert("form submitted");
+      toast.success("Form Submitted", {
+        autoClose: false,
+      });
       const ContactRef = ref(database, "Package");
       const newContactRef = push(ContactRef);
       set(newContactRef, {

@@ -2,24 +2,35 @@ import { React, useState } from "react";
 import styled from "styled-components";
 import database from "../utils/firebase";
 import { ref, set, push } from "firebase/database";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Form() {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Phone, setPhone] = useState("");
   const [Text, setText] = useState("");
+  toast.configure();
 
-  const handleSumit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const date = new Date().toString();
     if (Name === "" || Email === "" || Phone === "" || Text === "") {
-      alert("Please fill the form completely");
+      toast.warn("Please fill the form completely", {
+        autoClose: false,
+      });
     } else if (Phone.length > 10) {
-      alert("Phone number can only be of 10 digit");
+      toast.warn("Phone number can only be of 10 digit", {
+        autoClose: false,
+      });
     } else if (Email !== "" && !/\S+@\S+\.\S+/.test(Email)) {
-      alert("Email is invalid");
+      toast.warn("Email is invalid", {
+        autoClose: false,
+      });
     } else {
-      const ContactRef = ref(database, "Contact");
+      const ContactRef = ref(database, "Contact", {
+        autoClose: false,
+      });
       const newContactRef = push(ContactRef);
       set(newContactRef, {
         Name,
@@ -28,7 +39,10 @@ function Form() {
         Text,
         date,
       });
-      alert("Form Submit");
+
+      toast.success("Form Submit", {
+        autoClose: false,
+      });
       setName("");
       setEmail("");
       setPhone("");
@@ -68,8 +82,8 @@ function Form() {
         placeholder="Enter Text Here..."
         onChange={(e) => setText(e.target.value)}
       />
-      <Form__Button type="submit" onClick={handleSumit}>
-        Sumit
+      <Form__Button type="submit" onClick={handleSubmit}>
+        Submit
       </Form__Button>
     </Form__Container>
   );
