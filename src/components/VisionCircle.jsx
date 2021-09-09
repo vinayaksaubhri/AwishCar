@@ -35,9 +35,14 @@ const Heading__Container = styled.div`
   font-weight: 500;
   font-size: 2.4rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 `;
 const SubHeading = styled.div`
   margin-top: 1rem;
   font-weight: 300;
   font-size: 1.2rem;
+  text-align: center;
+  width: 80%;
+  align-self: center;
 `;

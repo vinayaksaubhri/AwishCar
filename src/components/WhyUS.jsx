@@ -29,7 +29,7 @@ function WhyUS() {
           <WhyUsCard
             Img={CarPrice}
             Heading="Keeping your car new"
-            Body="Keeps the car looking new throughout its life. Elimating the changes of scraches on your car by using Microfiber cloth."
+            Body="Eliminating the chances of scratching on your car by using microfibre towels and spraying water on the car first which acts as a lubricant."
           />
         </WhyUs__Card_Container>
       </MediaQuery>

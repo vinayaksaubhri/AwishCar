@@ -11,9 +11,9 @@ function WhatMakeUSBetter() {
   return (
     <Container>
       <Heading_Contianer>
-        What make us Better
+        What make us Different
         <SubHeading>
-          What makes us better than other cleaning services.
+          What makes us different than other cleaning services.
         </SubHeading>
       </Heading_Contianer>
       <Card__Svg_container>

@@ -59,12 +59,14 @@ const Card__List = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
+  gap: 0.5rem;
 `;
 const List_item = styled.div`
   font-size: 12px;
   margin-bottom: 5px;
   display: flex;
   gap: 1rem;
+  align-items: center;
 `;
 const List_item_Second = styled.div`
   font-size: 8px;

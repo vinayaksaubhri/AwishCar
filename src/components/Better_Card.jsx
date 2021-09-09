@@ -54,7 +54,7 @@ const Card__List = styled.div`
 `;
 const List_item = styled.div`
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
   display: flex;
   gap: 1rem;
   @media (max-width: 768px) {

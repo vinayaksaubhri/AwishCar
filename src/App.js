@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import LandingPage from "./LandingPage";
-const LazyBookNow = lazy(() => import("./BookNow"));
+import LandingPage from "./Pages/LandingPage";
+const LazyBookNow = lazy(() => import("./Pages/BookNow"));
 
 function App() {
   return (

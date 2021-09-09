@@ -34,7 +34,7 @@ export default function VisionSlider() {
       />
       <VisionCircle
         Heading="Eco-Friendly"
-        Subheading="We use Eco-Friendly material to clean."
+        Subheading="We commute on a battery operated vehicle resulting in no pollution at all."
         Svg={Eco}
       />
     </Slider>

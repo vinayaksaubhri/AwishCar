@@ -2,13 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDEqWskSvTBUApQNq-KVXVGOMgrGTDqk7M",
-  authDomain: "awishcar-d6253.firebaseapp.com",
-  databaseURL: "https://awishcar-d6253-default-rtdb.firebaseio.com",
-  projectId: "awishcar-d6253",
-  storageBucket: "awishcar-d6253.appspot.com",
-  messagingSenderId: "788546781579",
-  appId: "1:788546781579:web:5df7c08d74420a69f82f8e",
+  apiKey: "AIzaSyDSAsuJP7yu0ybO2YIJvhMreWV5qNugdYM",
+  authDomain: "landing-page-818bd.firebaseapp.com",
+  databaseURL:
+    "https://landing-page-818bd-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "landing-page-818bd",
+  storageBucket: "landing-page-818bd.appspot.com",
+  messagingSenderId: "153268203671",
+  appId: "1:153268203671:web:e0d3befab6e297de03f9d2",
 };
 const firebaseApp = initializeApp(firebaseConfig);
 

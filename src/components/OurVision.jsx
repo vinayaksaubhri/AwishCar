@@ -30,7 +30,7 @@ function OurVision() {
           />
           <VisionCircle
             Heading="Eco-Friendly"
-            Subheading="We use Eco-Friendly material to clean."
+            Subheading={`We commute on a battery operated vehicle resulting in no pollution at all.`}
             Svg={Eco}
           />
         </Circle__Container>
@@ -75,6 +75,7 @@ const Circle__Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin-left: 1rem;
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 5rem;

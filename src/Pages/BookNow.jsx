@@ -1,15 +1,15 @@
 import React from "react";
-import Navbar from "./components/navbar";
+import Navbar from "../components/navbar";
 import styled from "styled-components";
-import { BookNowPriceList2 } from "./Static/BookNowPrice";
-import Footer from "./components/Footer";
-import BookNowPrice from "./components/BookNowPrice";
+import { BookNowPriceList2 } from "../Static/BookNowPrice";
+import Footer from "../components/Footer";
+import BookNowPrice from "../components/BookNowPrice";
 import { useState } from "react";
-import SubmitButton from "./components/SubmitButton";
-import database from "./utils/firebase";
+import SubmitButton from "../components/SubmitButton";
+import database from "../utils/firebase";
 import { ref, set, push } from "firebase/database";
 import { useHistory } from "react-router";
-import ScrollToOnMount from "./components/ScrollToOnMount";
+import ScrollToOnMount from "../components/ScrollToOnMount";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

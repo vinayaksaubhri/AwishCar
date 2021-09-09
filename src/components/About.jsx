@@ -24,8 +24,8 @@ function About() {
           of how car being cleaned in our country.
           <br />
           We believe in thinking differently and the way we challenge the
-          current situation by developing a process of cleaning the car which is
-          good for environment, eco-friendly and provides employment to the
+          current is situation by developing a process of cleaning the car which
+          is good for environment, eco-friendly and provides employment to the
           people of India.
           <br />
           We use finest range of products suitable for cars paint and are easy

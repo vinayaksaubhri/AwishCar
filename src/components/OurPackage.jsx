@@ -36,6 +36,7 @@ function OurPackage() {
               SecondPrice="1500"
               BackGroundColor="#ffffff"
               ButtonText="Book Now"
+              Landing
             />
             <PackageCard
               Text="3 Months"
@@ -44,6 +45,7 @@ function OurPackage() {
               SecondPrice="4500"
               ButtonText="Book Now"
               Green
+              Landing
             />
             <PackageCard
               Text="6 Months"
@@ -51,6 +53,7 @@ function OurPackage() {
               Price="₹ 8694"
               SecondPrice="8700"
               ButtonText="Book Now"
+              Landing
             />
           </PackageCard__Container>
           <img src={RightLeaf} alt="" />
@@ -59,6 +62,7 @@ function OurPackage() {
       <MediaQuery maxWidth={768}>
         <CardSlider Text="Book Now" />
       </MediaQuery>
+      <Terms>*Prices may vary according to your Car model</Terms>
     </Container>
   );
 }
@@ -111,4 +115,9 @@ const Card__Svg_container = styled.div`
       display: none;
     }
   }
+`;
+const Terms = styled.div`
+  text-align: center;
+  font-size: 12px;
+  justify-self: flex-end;
 `;

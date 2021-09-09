@@ -4,16 +4,17 @@ export const AwishCarFeature = [
   "Microfiber Cloth ",
   "Glass Cleaners ",
   "Tyre Dressing",
-  "Scalnt Coats",
-  "Conditions",
+  "Sealant Coats",
+  "Leather conditioners",
   "All purpose cleaners",
 ];
 export const OrdinaryCarCleaning = [
   "Water Wastage",
-  "Buckets",
+  "Same bucket instead of bucket",
   "Old Rag",
   "Hard Water",
   "No Tyre Dressing",
-  "No Conditions",
+  "Wearing rings, belts, chain",
   "No APC",
+  "No defined process",
 ];
