@@ -6,8 +6,24 @@ import Profile from "../Image/Profile.svg";
 import Eco from "../Image/Eco.svg";
 import MediaQuery from "react-responsive";
 import VisionSlider from "./VisionSlider";
+import Impact from "../Image/Impact.svg";
+import Change from "../Image/Change.svg";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../style.css";
 
 function OurVision() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+  };
   return (
     <Container>
       <Heading__Container>
@@ -17,7 +33,7 @@ function OurVision() {
         </SubHeading>
       </Heading__Container>
       <MediaQuery minWidth={769}>
-        <Circle__Container>
+        <Slider {...settings} style={{ width: "100vw" }}>
           <VisionCircle
             Heading="Save Water"
             Subheading="We use special technique to minimize the use of water."
@@ -33,7 +49,17 @@ function OurVision() {
             Subheading={`We commute on a battery operated vehicle resulting in no pollution at all.`}
             Svg={Eco}
           />
-        </Circle__Container>
+          <VisionCircle
+            Heading="Impact"
+            Subheading="We are working to make an impact on the team, the community and want our employees to outwork and outperform people around them so everyone feels the need to do more."
+            Svg={Impact}
+          />
+          <VisionCircle
+            Heading="Change"
+            Subheading={`We want to change the perception people have for daily car cleaning...it's not just about cleaning and its about the overall maintenance of the car.`}
+            Svg={Change}
+          />
+        </Slider>
       </MediaQuery>
       <MediaQuery maxWidth={768}>
         <VisionSlider />

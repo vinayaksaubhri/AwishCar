@@ -7,6 +7,8 @@ import Water from "../Image/Drop.svg";
 import Profile from "../Image/Profile.svg";
 import Eco from "../Image/Eco.svg";
 import "../style.css";
+import Impact from "../Image/Impact.svg";
+import Change from "../Image/Change.svg";
 
 const settings = {
   dots: true,
@@ -36,6 +38,16 @@ export default function VisionSlider() {
         Heading="Eco-Friendly"
         Subheading="We commute on a battery operated vehicle resulting in no pollution at all."
         Svg={Eco}
+      />
+      <VisionCircle
+        Heading="Impact"
+        Subheading="We are working to make an impact on the team, the community and want our employees to outwork and outperform people around them so everyone feels the need to do more."
+        Svg={Impact}
+      />
+      <VisionCircle
+        Heading="Change"
+        Subheading={`We want to change the perception people have for daily car cleaning...it's not just about cleaning and its about the overall maintenance of the car.`}
+        Svg={Change}
       />
     </Slider>
   );

@@ -4,10 +4,26 @@ import WhyUsCard from "./WhyUsCard";
 import Price from "../Image/Price.svg";
 import CarPrice from "../Image/CarPrice.svg";
 import CarUV from "../Image/CarUV.svg";
+import CarAppearance from "../Image/CarAppearance.svg";
+import CarSolance from "../Image/CarSolance.svg";
 import MediaQuery from "react-responsive";
 import WhyUSSlider from "./WhyUSSlider";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../style.css";
 
 function WhyUS() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+  };
   return (
     <WhyUs__Container>
       <WhyUs__Heading_Contianer>
@@ -15,7 +31,7 @@ function WhyUS() {
         <SubHeading>Benefits of choosing our services.</SubHeading>
       </WhyUs__Heading_Contianer>
       <MediaQuery minWidth={769}>
-        <WhyUs__Card_Container>
+        <Slider {...settings} style={{ width: "100vw" }}>
           <WhyUsCard
             Img={Price}
             Heading="Higher Resale Value"
@@ -31,7 +47,17 @@ function WhyUS() {
             Heading="Keeping your car new"
             Body="Eliminating the chances of scratching on your car by using microfibre towels and spraying water on the car first which acts as a lubricant."
           />
-        </WhyUs__Card_Container>
+          <WhyUsCard
+            Img={CarAppearance}
+            Heading="Appearance"
+            Body="The way a man treats his car is how he treats himself...also driving a nicely detailed car always makes you feel good."
+          />
+          <WhyUsCard
+            Img={CarSolance}
+            Heading="Solance"
+            Body="With Awishcars daily car cleaning services, you are assured that your car would look and feel great inside-out and would give you a feeling of joy everytime you lay your eyes on it. "
+          />
+        </Slider>
       </MediaQuery>
       <MediaQuery maxWidth={768}>
         <WhyUSSlider />

@@ -1,5 +1,9 @@
 .slick-slide > div {
   display: flex;
   justify-content: center;
-  margin-left: 7vw;
+}
+@media (max-width: 768px) {
+  .slick-slide > div {
+    margin-left: 7vw;
+  }
 }

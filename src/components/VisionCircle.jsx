@@ -22,6 +22,7 @@ const Circle__Container = styled.div`
   flex-direction: column;
   gap: 3.5rem;
   align-items: center;
+  width: 100%;
 `;
 const Circle = styled.div`
   border-radius: 50%;

@@ -7,6 +7,8 @@ import CarPrice from "../Image/CarPrice.svg";
 import CarUV from "../Image/CarUV.svg";
 import WhyUsCard from "./WhyUsCard";
 import "../style.css";
+import CarAppearance from "../Image/CarAppearance.svg";
+import CarSolance from "../Image/CarSolance.svg";
 
 const settings = {
   dots: true,
@@ -38,6 +40,16 @@ export default function WhyUSSlider() {
         Img={CarPrice}
         Heading="Keeping your car new"
         Body="Keeps the car looking new throughout its life. Elimating the changes of scraches on your car by using Microfiber cloth."
+      />
+      <WhyUsCard
+        Img={CarAppearance}
+        Heading="Appearance"
+        Body="The way a man treats his car is how he treats himself...also driving a nicely detailed car always makes you feel good."
+      />
+      <WhyUsCard
+        Img={CarSolance}
+        Heading="Solance"
+        Body="With Awishcars daily car cleaning services, you are assured that your car would look and feel great inside-out and would give you a feeling of joy everytime you lay your eyes on it. "
       />
     </Slider>
   );
