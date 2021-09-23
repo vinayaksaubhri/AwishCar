@@ -10,7 +10,7 @@ export const AwishCarFeature = [
 ];
 export const OrdinaryCarCleaning = [
   "Water Wastage",
-  "Same bucket instead of bucket",
+  "Same bucket",
   "Old Rag",
   "Hard Water",
   "No Tyre Dressing",
